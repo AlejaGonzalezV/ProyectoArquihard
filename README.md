@@ -1,4 +1,5 @@
 # ProyectoArquihard
-##Integrantes
-Alejandra González Vélez
-Angie Valentina Córdoba
+## Integrantes
+
+#### Alejandra González Vélez
+#### Angie Valentina Córdoba
