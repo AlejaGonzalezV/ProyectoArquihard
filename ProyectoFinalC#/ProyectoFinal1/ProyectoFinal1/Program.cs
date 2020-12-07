@@ -17,7 +17,7 @@ namespace ProyectoFinal1
         VERSIÓN 1
         */
  
-        static void AlgoritmoVersion_1(String src)
+        static void AlgoritmoVersion_1(String src, int tam)
         {
 
             /*
@@ -50,14 +50,14 @@ namespace ProyectoFinal1
             Console.WriteLine("Algoritmo Version 1: " + tiempo);
 
 
-            a.Save(@"C:\Users\aleja\Desktop\imalg1inv.bmp");
+            a.Save(@"C:\Users\aleja\Documents\Universidad\Semestre8\Arquihard\ProyectoFinal\inv\imgalg1inv" + tam + ".bmp");
         }
 
         /*
         VERSIÓN 2
         */
 
-        static void AlgoritmoVersion_2(String src)
+        static void AlgoritmoVersion_2(String src, int tam)
         {
             /*
              Variable donde se almacenan los bits de la imagen.
@@ -111,13 +111,13 @@ namespace ProyectoFinal1
             tiempo = (long)(stopWatch.Elapsed.TotalMilliseconds * 1000000);
             Console.WriteLine("Algoritmo Version 2: " + tiempo);
 
-            a.Save(@"C:\Users\aleja\Desktop\imgalg2inv.bmp");
+            a.Save(@"C:\Users\aleja\Documents\Universidad\Semestre8\Arquihard\ProyectoFinal\inv\imgalg2inv" + tam + ".bmp");
         }
 
         /*
         VERSIÓN 3
         */
-        static void AlgoritmoVersion_3(String src)
+        static void AlgoritmoVersion_3(String src, int tam)
         {
             /*
              Variable donde se almacenan los bits de la imagen.
@@ -150,14 +150,14 @@ namespace ProyectoFinal1
             tiempo = (long)(stopWatch.Elapsed.TotalMilliseconds * 1000000);
             Console.WriteLine("Algoritmo Version 3: " + tiempo);
 
-            a.Save(@"C:\Users\aleja\Desktop\imgalg3inv.bmp");
+            a.Save(@"C:\Users\aleja\Documents\Universidad\Semestre8\Arquihard\ProyectoFinal\inv\imgalg3inv" + tam + ".bmp");
 
         }
 
         /*
         VERSIÓN 4
         */
-        static void AlgoritmoVersion_4(String src)
+        static void AlgoritmoVersion_4(String src, int tam)
         {
 
             /*
@@ -202,14 +202,14 @@ namespace ProyectoFinal1
             Console.WriteLine("Algoritmo Version 4: " + tiempo);
 
 
-            a.Save(@"C:\Users\aleja\Desktop\imgalg4inv.bmp");
+            a.Save(@"C:\Users\aleja\Documents\Universidad\Semestre8\Arquihard\ProyectoFinal\inv\imgalg4inv" + tam + ".bmp");
 
         }
 
         /*
         VERSIÓN 5
         */
-        static void AlgoritmoVersion_5(String src)
+        static void AlgoritmoVersion_5(String src, int tam)
         {
             /*
              Variable donde se almacenan los bits de la imagen.
@@ -255,7 +255,7 @@ namespace ProyectoFinal1
             tiempo = (long)(stopWatch.Elapsed.TotalMilliseconds * 1000000);
             Console.WriteLine("Algoritmo Version 5: " + tiempo);
 
-            a.Save(@"C:\Users\aleja\Desktop\imgalg5inv.bmp");
+            a.Save(@"C:\Users\aleja\Documents\Universidad\Semestre8\Arquihard\ProyectoFinal\inv\imgalg5inv" + tam + ".bmp");
 
         }
 
@@ -266,34 +266,38 @@ namespace ProyectoFinal1
             Console.WriteLine("Inserte versión del algoritmo: (ej: 1)");
             int version = int.Parse(Console.ReadLine());
 
-            String imagenUtilizada = @"C:\Users\aleja\Desktop\mimir.bmp";
+            Console.WriteLine("Inserte el tamaño de la imagen: (ej: 512)");
+            int tam = int.Parse(Console.ReadLine());
+
+
+            String imagenUtilizada = @"C:\Users\aleja\Documents\Universidad\Semestre8\Arquihard\ProyectoFinal\img\" + tam + ".bmp";
 
 
             switch (version)
                 {
                     case 1:
 
-                        AlgoritmoVersion_1(imagenUtilizada);
+                        AlgoritmoVersion_1(imagenUtilizada, tam);
                         break;
 
                     case 2:
 
-                        AlgoritmoVersion_2(imagenUtilizada);
+                        AlgoritmoVersion_2(imagenUtilizada, tam);
                         break;
 
                     case 3:
                        
-                        AlgoritmoVersion_3(imagenUtilizada);
+                        AlgoritmoVersion_3(imagenUtilizada, tam);
                         break;
 
                     case 4:
 
-                        AlgoritmoVersion_4(imagenUtilizada);
+                        AlgoritmoVersion_4(imagenUtilizada, tam);
                         break;
 
                     case 5:
 
-                        AlgoritmoVersion_5(imagenUtilizada);
+                        AlgoritmoVersion_5(imagenUtilizada, tam);
                         break;
 
                 }

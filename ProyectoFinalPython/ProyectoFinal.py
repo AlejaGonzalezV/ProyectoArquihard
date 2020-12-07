@@ -3,7 +3,7 @@ from colour import Color
 import time
 
 
-def algoritmoV1 (src):
+def algoritmoV1 (src, tam):
 	img = Image.open(src);
 	img2 = img
 
@@ -26,9 +26,9 @@ def algoritmoV1 (src):
 	print ("Algoritmo v1: " + str(tiempo))
 
 	#Cambiar esta ruta
-	img2.save("./inv/im1i.bmp");
+	img2.save("./../inv/imgalg1inv"+ tam + ".bmp");
 
-def algoritmoV2(src):
+def algoritmoV2(src, tam):
 	img = Image.open(src);
 	img2 = img
 
@@ -64,10 +64,10 @@ def algoritmoV2(src):
 	print ("Algoritmo v2: " + str(tiempo))
 
 	#Cambiar esta ruta
-	img2.save("./inv/im1i.bmp");
+	img2.save("./../inv/imgalg2inv"+ tam + ".bmp");
 
 	#CAMBIOOOOOOOOOO
-def algoritmoV3(src):
+def algoritmoV3(src, tam):
 	img = Image.open(src);
 	img2 = img
 
@@ -88,9 +88,9 @@ def algoritmoV3(src):
 	print ("Algoritmo v3: " + str(tiempo))
 
 	#Cambiar esta ruta
-	img2.save("./inv/im1i.bmp");
+	img2.save("./../inv/imgalg3inv"+ tam + ".bmp");
 
-def algoritmoV4(src):
+def algoritmoV4(src, tam):
 	img = Image.open(src);
 	img2 = img
 
@@ -119,9 +119,9 @@ def algoritmoV4(src):
 	print ("Algoritmo v4: " + str(tiempo))
 
 	#Cambiar esta ruta
-	img2.save("./inv/im1i.bmp");
+	img2.save("./../inv/imgalg4inv"+ tam + ".bmp");
 
-def algoritmoV5(src):
+def algoritmoV5(src, tam):
 	img = Image.open(src);
 	img2 = img
 
@@ -157,28 +157,31 @@ def algoritmoV5(src):
 	print ("Algoritmo v5: " + str(tiempo)) 
 
 	#Cambiar esta ruta
-	img2.save("./inv/im1i.bmp");
+	img2.save("./../inv/imgalg5inv"+ tam + ".bmp");
 
 
 def start():
 
-    print("Inserte la versión del algoritmo")
+    print("Inserte el algoritmo a usar")
     version = input()
+    print("Inserte el tamaño de la imagen")
+    tam = input()
 
-    src = "./img/im1.bmp"
+    src = "./../img/" + tam + ".bmp"
 
     if version == "1":
-        algoritmoV1(src)
+        algoritmoV1(src, tam)
     elif version == "2":
-        algoritmoV2(src)
+        algoritmoV2(src, tam)
     elif version == "3":
-        algoritmoV3(src)
+        algoritmoV3(src, tam)
     elif version == "4":
-        algoritmoV4(src)
+        algoritmoV4(src, tam)
     elif version == "5":
-        algoritmoV5(src)
+        algoritmoV5(src, tam)
     else:
         print("Opción no válida")
+
 
 start()
 
